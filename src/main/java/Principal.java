@@ -7,6 +7,7 @@
  *
  * @author 1066839260
  */
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
@@ -40,13 +41,13 @@ public class Principal {
     public static void main(String[] args) {
         int opcion;
         do {
-            System.out.println("****** Zona Virtual S.A.********");
-            System.out.println("******* Aplicación de Lista de Contactos ********");
+            System.out.println( "Zona Virtual S.A");
+      
             System.out.println("1. Agregar un Nuevo Contacto");
             System.out.println("2. Mostrar Lista de Contactos");
             System.out.println("3. Buscar contacto por nombre");
-            System.out.println("4. Ordenar por Burbuja a partir de los nombres");
-            System.out.println("5. Ordenar por Inserción a partir de los números Telefónicos");
+            System.out.println("4. Ordenar por Burbuja   los nombres");
+            System.out.println("5. Ordenar por Inserción  números Telefónicos");
             System.out.println("6. Salir");
             System.out.println("Ingrese su opción:");
 
@@ -112,7 +113,7 @@ public class Principal {
                 System.out.println("Contacto encontrado:");
                 System.out.println(contacto.getNombre() + " - " + contacto.getNumeroTelefono());
                 encontrado = true;
-                break;
+                
             }
         }
         if (!encontrado) {
@@ -143,7 +144,7 @@ public class Principal {
 
         Collections.sort(listaContactos, (c1, c2) -> Integer.compare(c1.getNumeroTelefono(), c2.getNumeroTelefono()));
 
-        System.out.println("Lista de Contactos ordenada por número de teléfono:");
+        System.out.println("Lista de telefonos ordenada por nombres:");
         for (int i = 0; i < listaContactos.size(); i++) {
             Contacto contacto = listaContactos.get(i);
             System.out.println((i + 1) + ". " + contacto.getNombre() + " - " + contacto.getNumeroTelefono());
